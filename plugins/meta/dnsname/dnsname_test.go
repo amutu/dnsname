@@ -117,7 +117,7 @@ var _ = Describe("dnsname tests", func() {
 			Expect(result.DNS.Search).To(Equal([]string{"foobar.io"}))
 
 			// Check that all configuration files are created
-			files, err := ioutil.ReadDir("/run/containers/cni/dnsname/test")
+			files, err := ioutil.ReadDir("/var/run/containers/cni/dnsname/test")
 			Expect(err).To(BeNil())
 			expectedFileNames := []string{"addnhosts", "dnsmasq.conf", "lock", "pidfile"}
 			var resultingFileNames []string
