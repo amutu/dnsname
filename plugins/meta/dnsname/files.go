@@ -11,7 +11,7 @@ import (
 	"text/template"
 
 	"github.com/containernetworking/plugins/plugins/ipam/host-local/backend/disk"
-	"github.com/coreos/go-iptables/iptables"
+//	"github.com/coreos/go-iptables/iptables"
 	"github.com/sirupsen/logrus"
 )
 
@@ -54,6 +54,7 @@ func checkForDNSMasqConfFile(conf dnsNameFile) error {
 	if err != nil {
 		return err
 	}
+	/*
 	ip, err := iptables.New()
 	if err != nil {
 		return err
@@ -68,6 +69,7 @@ func checkForDNSMasqConfFile(conf dnsNameFile) error {
 			return err
 		}
 	}
+	*/
 	// Generate the template and compile it.
 	return ioutil.WriteFile(conf.ConfigFile, newConfig, 0700)
 }
