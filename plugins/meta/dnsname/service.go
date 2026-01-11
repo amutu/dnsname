@@ -98,6 +98,6 @@ func (d dnsNameFile) getProcess() (*os.Process, error) {
 // makePath formats a path name given a domain and suffix
 func makePath(networkName, fileName string) string {
 	// the generic path for where conf, host, pid files are kept is:
-	// /run/containers/cni/dnsmasq/<network-name>/
+	// /var/run/containers/cni/dnsmasq/<network-name>/
 	return filepath.Join(dnsNameConfPath(), networkName, fileName)
 }
