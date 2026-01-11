@@ -63,5 +63,5 @@ func dnsNameConfPath() string {
 	if xdgRuntimeDir != "" {
 		return filepath.Join(xdgRuntimeDir, "containers/cni/dnsname")
 	}
-	return "/run/containers/cni/dnsname"
+	return "/var/run/containers/cni/dnsname"
 }
